@@ -38,11 +38,28 @@ ul {
 
 .profile-photo {
   width: 25%;
-  display: block;
-  margin-left: auto;
+  display: inline-block;
+  margin-left: 38%;
   margin-right: auto;
 
 }
+
+#title {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  text-align: center;
+}
+
+/* Social Media Icons. */
+#title a {
+  color: #383838;
+}
+
+.fa-linkedin {
+  margin-right: 2px;
+}
+
 
 .navbar-brand {
   margin-left: 1em;
@@ -98,7 +115,7 @@ ul {
   color: #F8F8F8;
   text-align: center;
   background-color: #333333;
-  padding: 16px 0 16px 0;
+  padding: 16px 0 2px 0;
 }
 
 .copyright {
@@ -118,7 +135,7 @@ ul {
   background-image: linear-gradient(to bottom, #333333, #333333);
   -webkit-border-radius: 28;
   -moz-border-radius: 28;
-  border-radius: 28px;
+  border-radius: 8px;
   font-family: Arial;
   color: #F8F8F8;
   font-size: 15px;
@@ -135,4 +152,5 @@ ul {
   background-image: -o-linear-gradient(top, #888888, #888888);
   background-image: linear-gradient(to bottom, #888888, #888888);
   text-decoration: none;
+  color: #F8F8F8;
 }
