@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
 :root {
   --cloud-white: #F8F8F8;
   --teal: #64ffda;
@@ -14,7 +16,7 @@
 
 body {
   background-color: var(--white);
-  font-family: Consolas, Sans-serif;
+  font-family: 'Inter', Consolas, sans-serif;
 }
 
 h2 {
@@ -76,16 +78,25 @@ ul {
   color: var(--light-black);
 }
 
+.navbar-brand {
+  transition: color 0.2s ease;
+}
+
 .navbar-brand:hover {
   color: var(--sea-blue) !important;
 }
 
 .nav-link {
-   /* color: #eeeeee !important; */
+  transition: color 0.2s ease;
 }
 
 .nav-link:hover {
   color: #2b5876 !important;
+}
+
+.nav-link.active {
+  color: var(--navy-blue) !important;
+  font-weight: 600;
 }
 
 .nav-item {
@@ -95,6 +106,15 @@ ul {
 .navbar {
   padding-top: 0.1em;
   padding-bottom: 0.1em;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: var(--white);
+  transition: box-shadow 0.3s ease;
+}
+
+.navbar-scrolled {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 /********************************** Greeting Section *********************************/
@@ -119,6 +139,11 @@ ul {
   border-radius: 10em;
   border: 2px solid transparent;
   border-color: var(--navy-blue);
+  transition: box-shadow 0.3s ease;
+}
+
+#profile-photo:hover {
+  box-shadow: 0 6px 20px rgba(40, 75, 99, 0.3);
 }
 /********************************** Introduction Section *********************************/
 
@@ -145,11 +170,12 @@ ul {
   width: 40px;
   margin-right: 20px;
   margin-top: 5px;
+  transition: transform 0.25s ease;
 }
 
-/* .technology-icon:hover {
-  transform: translateY(-10px);
-} */
+.technology-icon:hover {
+  transform: translateY(-6px);
+}
 
 #website-github-statement {
   margin-left: 30px;
@@ -178,106 +204,128 @@ ul {
 }
 
 /********************************** Experience Section *********************************/
-/* *, #hello,#experience-body{
-  padding:0px;
-  margin:0px;
-  box-sizing:border-box;
-  font-family:'Poppins', sans-serif;
-  perspective:800px;
-} */
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
 #experience {
   margin-left: auto;
   margin-right: auto;
+  padding-bottom: 3rem;
 }
 
-#experience-body{
-  width:100%;
-  min-height:100vh;
-  justify-content:center;
-  align-items:center;
-  
+#experience-body {
+  width: 100%;
 }
+
 #experience-title-text {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
   margin-top: 3%;
 }
-.timeline{
+
+.timeline {
   width: 95%;
-  color:#fff;
-  padding:30px 20px;
+  padding: 30px 20px;
   margin-left: auto;
   margin-right: auto;
-  animation: fadeIn 5s;
+  animation: fadeIn 0.8s ease both;
 }
-.timeline ul{
-  list-style-type:none;
-  border-left:2px solid #094a68;
-  padding:10px 5px;
+
+.timeline ul {
+  list-style-type: none;
+  border-left: 2px solid var(--navy-blue);
+  padding: 10px 5px;
 }
-.timeline ul li{
-  padding:20px 20px;
-  position:relative;
-  cursor:pointer;
-  transition:.5s;
+
+.timeline ul li {
+  padding: 20px 20px;
+  position: relative;
+  cursor: pointer;
+  border-radius: 0;
+  transition: background-color 0.35s ease, border-radius 0.35s ease;
 }
-.timeline ul li span{
-  display:inline-block;
+
+.timeline-date {
+  display: inline-block;
   background-color: var(--navy-blue);
-  border-radius:25px;
-  padding:4px 8px;
-  font-size:15px;
-  text-align:center;
+  border-radius: 25px;
+  padding: 5px 12px;
+  font-size: 14px;
+  text-align: center;
   color: var(--cloud-white);
 }
-.timeline ul li .content h3{
+
+.job-role {
   color: var(--light-black);
-  font-size:17px;
-  padding-top:5px;
+  font-size: 17px;
+  font-weight: 600;
+  padding-top: 6px;
+  margin-bottom: 3px;
+  transition: color 0.35s ease;
 }
-.timeline ul li .content p{
-  padding:5px 0px 15px 0px;
-  font-size:15px;
+
+.job-company {
+  color: var(--navy-blue);
+  font-size: 13px;
+  font-weight: 500;
+  margin: 0 0 8px 0;
+  padding: 0;
+  transition: color 0.35s ease;
 }
-.timeline ul li:before{
-  position:absolute;
-  content:'';
-  width:10px;
-  height:10px;
+
+.job-description {
+  color: var(--light-black);
+  padding: 0 0 15px 0;
+  font-size: 15px;
+  margin: 0;
+  transition: color 0.35s ease;
+}
+
+.timeline ul li:before {
+  position: absolute;
+  content: '';
+  width: 10px;
+  height: 10px;
   background-color: var(--navy-blue);
-  border-radius:50%;
-  left:-11px;
-  top:28px;
-  transition:.5s;
+  border-radius: 50%;
+  left: -11px;
+  top: 28px;
+  transition: background-color 0.35s ease, box-shadow 0.35s ease;
 }
-.timeline ul li:hover{
+
+.timeline ul li:hover {
   background-color: var(--light-black);
+  border-radius: 6px;
+}
+
+.timeline ul li:hover .job-role {
   color: var(--cloud-white);
 }
 
-.timeline ul li:hover h3{
+.timeline ul li:hover .job-company {
+  color: var(--teal);
+}
+
+.timeline ul li:hover .job-description {
   color: var(--cloud-white);
 }
 
-.timeline ul li:hover p{
-  color: var(--cloud-white);
-}
-
-.timeline ul li:hover:before{
+.timeline ul li:hover:before {
   background-color: var(--salmon);
-  box-shadow:0px 0px 10px 2px var(--salmon);
+  box-shadow: 0px 0px 10px 2px var(--salmon);
 }
 
-@media (max-width:300px){
-  .timeline{
-    padding:30px 5px 30px 10px;
+@media (max-width: 300px) {
+  .timeline {
+    padding: 30px 5px 30px 10px;
   }
-  .timeline ul li .content h3{
-    color:#34ace0;
-    font-size:15px;
+  .job-role {
+    font-size: 15px;
   }
-
 }
 
 /********************************** Education Section *********************************/
@@ -290,148 +338,105 @@ ul {
   margin-bottom: 3%;
 }
 
-#education-summary {
-  margin-top: 1rem;
-  padding: 1rem 2rem;
-  border-width: 1px;
-  border-style: solid;
-  border-color: var(--light-black);
-  border-radius: 5px;
-  /* border-image: linear-gradient(to right, #E5E5BE, #26a0da, #4e4376) 1; */
-}
-
-.education-card {
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 2rem;
-  /* border-width: 2px; */
-  border-style: solid;
-  /* border-image: linear-gradient(to right, #E5E5BE, #26a0da, #4e4376) 1; */
-}
-
-.education-title h3 {
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 3%;
-}
-
 #education-title-text {
   margin-bottom: 5%;
 }
 
-#education h5 {
-  margin-left: auto;
+.education-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
 }
 
-#education p {
-  margin-left: auto;
-  overflow: hidden;
-  font-size: 16px;
-  margin-left: auto;
-  margin-right: auto;
+.education-card {
+  width: 18rem;
+  border-style: solid;
+  border-width: 1px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  display: flex;
+  flex-direction: column;
 }
 
-.education-item {
-  margin-top: 5%;
-  margin-bottom: 5%;
-  margin-left: auto;
-  margin-right: auto;
-  overflow: hidden;
+.education-card:hover {
+  transform: translateY(-6px);
 }
 
-.education-image {
-  width: 125px;
+.education-card .card-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 1rem;
+}
+
+.education-logo {
+  width: 8rem;
+  margin: 1.5rem auto 1rem auto;
+  display: block;
+}
+
+.education-institution {
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--grey);
+  margin-bottom: 6px;
+  margin-left: 0;
+}
+
+.education-degree {
+  font-size: 14px;
+  color: var(--light-grey);
+  flex: 1;
+  margin: 0 0 1rem 0;
+}
+
+.graduation-badge {
+  display: inline-block;
+  padding: 5px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 500;
+  align-self: center;
 }
 
 #ucla-card {
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  width: 20rem;
-  padding-bottom: 5px;
-  border-width: 1px;
-  border-style: solid;
   border-color: #0092ca;
-  box-shadow: 3px 1px 3px #0092ca;
+  box-shadow: 0 4px 12px rgba(0, 146, 202, 0.2);
 }
 
-#ucla-card img {
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  padding-top: 2rem;
-  padding-bottom: 1rem;
+#ucla-card:hover {
+  box-shadow: 0 8px 24px rgba(0, 146, 202, 0.35);
 }
 
 .ucla-graduation-date-badge {
   background-color: #89CFF0;
-  padding: 1px 2px;
-  text-align: center;
-  border-radius: 5px;
 }
 
 #ucb-card {
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  width: 20rem;
-  padding-bottom: 5px;
-  border-width: 1px;
-  border-style: solid;
   border-color: #facf5a;
-  box-shadow: 3px 1px 3px #facf5a;
+  box-shadow: 0 4px 12px rgba(250, 207, 90, 0.3);
 }
 
-#ucb-card img {
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  padding-top: 2rem;
-  padding-bottom: 1rem;
+#ucb-card:hover {
+  box-shadow: 0 8px 24px rgba(250, 207, 90, 0.5);
 }
 
 .ucb-graduation-date-badge {
   background-color: #facf5a;
-  padding: 1px 2px;
-  text-align: center;
-  border-radius: 5px;
 }
 
 #au-card {
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  width: 20rem;
-  padding-bottom: 5px;
-  border-width: 1px;
-  border-style: solid;
   border-color: #f78536;
-  box-shadow: 3px 1px 3px #f78536;
+  box-shadow: 0 4px 12px rgba(247, 133, 54, 0.2);
 }
 
-#au-card img {
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  padding-top: 2rem;
-  padding-bottom: 1rem;
+#au-card:hover {
+  box-shadow: 0 8px 24px rgba(247, 133, 54, 0.35);
 }
 
 .au-graduation-date-badge {
   background-color: #f78536;
-  padding: 1px 2px;
-  text-align: center;
-  border-radius: 5px;
-}
-
-.graduation-date {
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  width: 90%;
-  margin: 0 auto;
-  transform: translate(-50%, -50%);
 }
 
 /********************************** Projects Section *********************************/
@@ -476,8 +481,12 @@ ul {
   text-align: center;
 }
 
+.project-btn {
+  transition: transform 0.25s ease;
+}
+
 .project-btn:hover {
-  transform: translateY(-10px);
+  transform: translateY(-6px);
 }
 
 .project-item {
@@ -487,11 +496,9 @@ ul {
 }
 
 .card-body a {
-  /* border-width: 2px; */
   border-style: solid;
-  /* border-image: linear-gradient(to right, var(--salmon), #26a0da) 1; */
-  border-color: blue;
-  color: blue;
+  border-color: var(--navy-blue);
+  color: var(--navy-blue);
   text-decoration: none;
   margin-top: 10px;
 }
@@ -607,14 +614,16 @@ ul {
 
 #email-icon {
   width: 70px;
+  transition: transform 0.25s ease;
 }
 
 #email-icon:hover {
-  transform: translateY(-10px);
+  transform: translateY(-8px);
 }
 
 .contact-icon {
   width: 40px;
+  transition: transform 0.25s ease;
 }
 
 #github-icon {
@@ -622,8 +631,7 @@ ul {
 }
 
 .contact-icon:hover {
-  color: var(--light-grey);
-  transform: translateY(-10px);
+  transform: translateY(-8px);
 }
 
 @media screen and (max-width: 920px) {
