@@ -1,131 +1,102 @@
 <!doctype html>
 <html lang="en">
 
-  <head>
+<head>
 
-    <!-- Bootstrap JS. Needed for Navbar Toggler -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
-    </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
-    </script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/style.css" rel="stylesheet" />
+  <link rel="icon" href="images/favicon.ico" />
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
-    <link href="css/style.css" rel="stylesheet" />
-    <link rel="icon" href="images/favicon.ico" />
-
-    <title>Justin Ng</title>
+  <title>Justin Ng</title>
 
 </head>
 
 <body>
 
   <!-- ###################################### Navigation Bar ###################################### -->
-  <nav id ="navbar" class="navbar navbar-expand-lg navbar-light">
-    <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
-      <a class="navbar-brand" href="index.html"> <img class="navbar-brand-img" src="images/favicon.ico"> </a>
-    </li>
+  <nav id="navbar" class="navbar">
+    <div class="navbar-inner">
+      <a class="navbar-brand" href="index.html"><img src="images/favicon.png" alt="Justin Ng"></a>
 
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler"
-      aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+      <button id="navToggler" class="navbar-toggler" type="button" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
 
-    <div class="collapse navbar-collapse" id="navbarToggler">
-
-      <ul class="navbar-nav">
-        <!-- data-toggle and data-target will collapse the navbar when a link is clicked. -->
-        <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
-          <a class="nav-link" href="index.html">Home</a>
-        </li>
-        <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
-          <a class="nav-link" href="experience.html">Experience</a>
-        </li>
-        <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
-          <a class="nav-link" href="education.html">Education</a>
-        </li>
-        <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
-          <a class="nav-link" href="projects.html">Projects</a>
-        </li>
-        <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
-          <a class="nav-link" href="contact.html">Contact</a>
-        </li>
+      <ul id="navLinks" class="nav-links">
+        <li><a class="nav-link" href="index.html">Home</a></li>
+        <li><a class="nav-link" href="background.html">Background</a></li>
+        <li><a class="nav-link" href="projects.html">Projects</a></li>
+        <li><a class="nav-link" href="contact.html">Contact</a></li>
       </ul>
     </div>
-
   </nav>
 
-  <!-- ###################################### Greeting ###################################### -->
+  <main>
 
-  <section id="greeting" class="col-md-5 col-sm-9 col-11">
-    <p>
-      <img src="images/justin-glass-ceiling.jpg" id="profile-photo">
-      <h1 id="introduction-text">
-        <!-- intro text displayed by js. -->
-      </h1>
-    </p>
-  </section>
+    <!-- ###################################### Greeting ###################################### -->
 
-  <!-- ###################################### Home ###################################### -->
-
-  <section id="home" class="col-md-5 col-sm-9 col-10">
-    <p>
-      Hi! My name is Justin and I enjoy building applications. I have extensive experience in all aspects
-      of the software development lifecycle -- from planning and design, to deployment and maintenance.
-      I discovered my passion for software development in 2019 when I was working full-time in government policy
-      and decided to create basic websites on my free time.
-      <br>
-      <br>
-      Now, I'm a software engineer at Intel Corporation where I contribute to applications that are essential to
-      the company's manufacturing and supply chain decision-making processes.
-      <br>
-      <br>
-      On a daily basis, I'm working with the following technologies:
-      <br>
-      <br>
-      <img src="images/c-sharp-icon.png" class="technology-icon">
-      <img src="images/sql-icon.png" class="technology-icon">
-      <img src="images/angular-icon.png" class="technology-icon">
-      <img src="images/html-icon.png" class="technology-icon">
-      <img src="images/css-icon.png" class="technology-icon">
-      <img src="images/javascript-icon.png" class="technology-icon">
-      <img src="images/ts-icon.png" class="technology-icon">
-      <img src="images/azure-icon.png" class="technology-icon">
-      <br>
-      <br>
-      <div id="website-github-statement">
-        I've made the code and documentation for this website available publicly, which can be viewed on my 
-        <a target="_blank" href="https://github.com/justinriverng/justinriverng.github.io/"> GitHub.</a>
+    <section id="greeting" class="container">
+      <div class="hero">
+        <img src="images/justin_mango_cartoon.png" id="profile-photo" class="hero-photo" alt="Justin Ng">
+        <h1 id="introduction-text" class="hero-intro">
+          <!-- intro text displayed by js. -->
+        </h1>
       </div>
-    </p>
-  </section>
+    </section>
+
+    <!-- ###################################### Home ###################################### -->
+
+    <section id="home" class="container">
+      <p>
+        Hi! My name is Justin and I enjoy building applications. I have extensive experience in all aspects
+        of the software development lifecycle -- from planning and design, to deployment and maintenance.
+        I discovered my passion for software development in 2019 when I was working in government policy.
+        Shortly after, I pivoted my career to software development and have been working in the field ever since.
+      </p>
+      <p>
+        Now, I'm a software engineer at Intel Corporation where I contribute to applications that are essential to
+        the company's foundry services. In my free time, I'm working on
+        <a href="https://www.noakboard.com" target="_blank">NoakBoard</a>,
+        a job board that curates government job postings.
+      </p>
+      <p>
+        On a daily basis, I'm working with the following technologies:
+      </p>
+
+      <div class="tech-row">
+        <img src="images/c-sharp-icon.png" class="technology-icon" alt="C#">
+        <img src="images/sql-icon.png" class="technology-icon" alt="SQL">
+        <img src="images/angular-icon.png" class="technology-icon" alt="Angular">
+        <img src="images/html-icon.png" class="technology-icon" alt="HTML">
+        <img src="images/css-icon.png" class="technology-icon" alt="CSS">
+        <img src="images/javascript-icon.png" class="technology-icon" alt="JavaScript">
+        <img src="images/ts-icon.png" class="technology-icon" alt="TypeScript">
+        <img src="images/azure-icon.png" class="technology-icon" alt="Azure">
+      </div>
+
+      <div class="github-note">
+        I've made the code and documentation for this website available publicly, which can be viewed on my
+        <a target="_blank" href="https://github.com/justinriverng/justinriverng.github.io/">GitHub.</a>
+      </div>
+    </section>
+
+  </main>
 
   <!-- ###################################### Copyright ###################################### -->
   <section id="copyright">
     <p>
-      © 2026 - Website Designed & Developed by Justin Ng | 
-      <a href="https://www.flaticon.com/free-icons/hashtag" title="hashtag icons">Hashtag icons created by Freepik - Flaticon</a>
+      © 2026 - Website Designed & Developed by Justin Ng |
+      <a target="_blank" href="https://www.flaticon.com/free-icons/hashtag" title="hashtag icons">Hashtag icons created by Freepik - Flaticon</a>
       | Angular Icon made by icon king1 from www.freeicons.io
     </p>
   </section>
-
-  <!-- Bootstrap JS Bundle w/ Popper. Leave this at the end of the body. -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous">
-  </script>
 
   <!-- JavaScript -->
   <script type="text/javascript" src="js/main.js"></script>
   <script type="text/javascript" src="js/index.js"></script>
 
 </body>
-
 
 </html>

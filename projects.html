@@ -1,180 +1,147 @@
 <!doctype html>
 <html lang="en">
-  <head>
 
-    <!-- Bootstrap JS. Needed for Navbar Toggler -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-    
-    <!-- Font Awesome -->
-    <script src="https://kit.fontawesome.com/5bedcc63ef.js" crossorigin="anonymous"></script>
+<head>
 
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
-    <link href="css/style.css" rel="stylesheet" />
-    <link rel = "icon" href = "images/favicon.ico" />
+  <link href="css/style.css" rel="stylesheet" />
+  <link rel="icon" href="images/favicon.ico" />
 
-    <title>Projects</title>
+  <title>Projects</title>
 
-    </head>
+</head>
 
-    <body>
+<body>
 
-        <!-- ###################################### Navigation Bar ###################################### -->
-        <nav id ="navbar" class="navbar navbar-expand-lg navbar-light">
-            <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
-                <a class="navbar-brand" href="index.html"> <img class="navbar-brand-img" src="images/favicon.ico"> </a>
-            </li>
-    
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler"
-                aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-    
-            <div class="collapse navbar-collapse" id="navbarToggler">
-                <ul class="navbar-nav">
-                    <!-- data-toggle and data-target will collapse the navbar when a link is clicked. -->
-                    <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
-                        <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
-                        <a class="nav-link" href="experience.html">Experience</a>
-                    </li>
-                    <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
-                        <a class="nav-link" href="education.html">Education</a>
-                    </li>
-                    <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
-                        <a class="nav-link" href="projects.html">Projects</a>
-                    </li>
-                    <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
-                        <a class="nav-link" href="contact.html">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-            <!-- ###################################### Projects ###################################### -->
-        <section id="projects" >
+  <!-- ###################################### Navigation Bar ###################################### -->
+  <nav id="navbar" class="navbar">
+    <div class="navbar-inner">
+      <a class="navbar-brand" href="index.html"><img src="images/favicon.png" alt="Justin Ng"></a>
 
-            <div class="col-lg-12 col-md-12 col-sm-12 col-12">
-            <h3 id="projects-title-text" class="projects-header"></h3>
-            <br>
-            </div>
-            
-            <div id="card-deck" class="col-lg-10 col-md-9 col-sm-9 col-9" >
-            <div class="row" >
+      <button id="navToggler" class="navbar-toggler" type="button" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
 
-                <!-- Project Item -->
-                <div class="project-item col-lg-4 col-md-6 col-sm-9 col-12">
-                <div id="noakboard-card" class="project-card card">
-                    <h4 class="card-header">NoakBoard</h4>
-                    <div class="card-body">
-                    <p>
-                        <strong>Details:</strong> A job board curated with the latest government job postings. New job postings are scraped each day.
-                        <br>
-                        <br>
-                        <strong>Technologies:</strong> TypeScript, Node.js, Express.js, Angular, MongoDB
-                        <br>
-                        <br>
-                        <div class="project-buttons">
-                            <a href="https://www.noakboard.com" target="_blank"
-                            class="btn btn-outline"> Live Application <i class="fas fa-external-link-alt"></i> </a>
-                        </div>
-                    </p>
-                    </div>
-                </div>
-                </div>
-    
-                <!-- Project Item -->
-                <div class="project-item col-lg-4 col-md-6 col-sm-9 col-12">
-                <div id="image-gallery-card" class="project-card card">
-                    <h4 class="card-header">Image Gallery App</h4>
-                    <div class="card-body">
-                    <p>
-                        <strong>Details:</strong> An image gallery web application where 
-                        users can store images to their unique account.
-                        <br>
-                        <br>
-                        <strong>Technologies:</strong> Python, Flask, AWS, PostgreSQL, HTML, CSS.
-                        <br>
-                        <br>
-                        <div class="project-buttons">
-                            <a href="https://github.com/justinriverng/python-image-gallery" target="_blank"
-                            class="btn btn-outline"> Github Repository <i class="fas fa-external-link-alt"></i> </a>
-                        </div>
-                    </p>
-                    </div>
-                </div>
-                </div>
-    
-                <!-- Project Item -->
-                <div class="project-item col-lg-4 col-md-6 col-sm-9 col-12">
-                <div id="web-browser-card" class="project-card card">
-                    <h4 class="card-header">Web Browser</h4>
-                    <div class="card-body">
-                    <p>
-                        <strong>Details:</strong> A web browser with a bookmark manager and history manager.
-                        <br>
-                        <br>
-                        <strong>Technologies:</strong> C#, .NET Framework.
-                        <br>
-                        <br>
-                        <div class="project-buttons">
-                            <a href="https://github.com/JustinRiverNg/WebBrowser" target="_blank"
-                            class="btn btn-outline"> Github Repository <i class="fas fa-external-link-alt"></i> </a>
-                            <br>
-                            <a href="images/super-web-browser-1.png" target="_blank"
-                            class="btn btn-outline">Screenshot Demo <i class="fas fa-external-link-alt"></i> </a>
-                        </div>
-                    </p>
-                    </div>
-                </div>
-                </div>
-    
-                <!-- Project Item -->
-                <div class="project-item col-lg-4 col-md-6 col-sm-9 col-12">
-                <div id="nba-shot-charts-card" class="project-card card">
-                    <h4 class="card-header">NBA Shot Charts</h4>
-                    <div class="card-body">
-                    <p>
-                        <strong>Details:</strong> Shot charts generated for players from 
-                        the Golden State Warriors' field goals in the 2016-2017 season.
-                        <br>
-                        <br>
-                        <strong>Technologies:</strong> R.
-                        <br>
-                        <br>
-                        <div class="project-buttons">
-                            <a href="https://github.com/JustinRiverNg/Computing-Data/tree/master/hw03" target="_blank"
-                            class="btn btn-outline">Github Repository <i class="fas fa-external-link-alt"></i> </a>
-                            <br>
-                            <a href="images/gsw-shot-chart-1.png" target="_blank" 
-                            class="btn btn-outline">Screenshot Demo <i class="fas fa-external-link-alt"></i></a>
-                        </div>
-                    </p>
-                    </div>
-                </div>
-                </div>
-    
-    
-            </div>
-            </div>
-        </section>
+      <ul id="navLinks" class="nav-links">
+        <li><a class="nav-link" href="index.html">Home</a></li>
+        <li><a class="nav-link" href="background.html">Background</a></li>
+        <li><a class="nav-link" href="projects.html">Projects</a></li>
+        <li><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
 
-            <!-- ###################################### Copyright ###################################### -->
-    <section id="copyright">
-        <p>© 2026 - Website Designed & Developed by Justin Ng</p>
+  <main>
+
+    <!-- ###################################### Projects ###################################### -->
+
+    <section id="projects" class="container">
+      <h2 id="projects-title-text" class="section-heading"></h2>
+
+      <div class="project-cards-container">
+
+        <!-- Project Item -->
+        <div class="project-card">
+          <h3 class="project-title">NoakBoard</h3>
+          <p class="project-description">
+            A job board curated with the latest government job postings. New job postings are scraped each day.
+          </p>
+          <div class="project-tags">
+            <span class="project-tag">TypeScript</span>
+            <span class="project-tag">Node.js</span>
+            <span class="project-tag">Express.js</span>
+            <span class="project-tag">Angular</span>
+            <span class="project-tag">MongoDB</span>
+          </div>
+          <div class="project-links">
+            <a href="https://www.noakboard.com" target="_blank" class="project-link">
+              Live Application
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Project Item -->
+        <div class="project-card">
+          <h3 class="project-title">Image Gallery App</h3>
+          <p class="project-description">
+            An image gallery web application where users can store images to their unique account.
+          </p>
+          <div class="project-tags">
+            <span class="project-tag">Python</span>
+            <span class="project-tag">Flask</span>
+            <span class="project-tag">AWS</span>
+            <span class="project-tag">PostgreSQL</span>
+            <span class="project-tag">HTML</span>
+            <span class="project-tag">CSS</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/justinriverng/python-image-gallery" target="_blank" class="project-link">
+              GitHub Repository
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Project Item -->
+        <div class="project-card">
+          <h3 class="project-title">Web Browser</h3>
+          <p class="project-description">
+            A web browser with a bookmark manager and history manager.
+          </p>
+          <div class="project-tags">
+            <span class="project-tag">C#</span>
+            <span class="project-tag">.NET Framework</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/JustinRiverNg/WebBrowser" target="_blank" class="project-link">
+              GitHub Repository
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+            </a>
+            <a href="images/super-web-browser-1.png" target="_blank" class="project-link">
+              Screenshot Demo
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Project Item -->
+        <div class="project-card">
+          <h3 class="project-title">NBA Shot Charts</h3>
+          <p class="project-description">
+            Shot charts generated for players from the Golden State Warriors' field goals in the 2016-2017 season.
+          </p>
+          <div class="project-tags">
+            <span class="project-tag">R</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/JustinRiverNg/Computing-Data/tree/master/hw03" target="_blank" class="project-link">
+              GitHub Repository
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+            </a>
+            <a href="images/gsw-shot-chart-1.png" target="_blank" class="project-link">
+              Screenshot Demo
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
     </section>
-  
-      <!-- Bootstrap JS Bundle w/ Popper. Leave this at the end of the body. -->
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
-  
-      <!-- JavaScript -->
-      <script type="text/javascript" src="js/main.js"></script>
-      <script type="text/javascript" src="js/projects.js"></script>
 
-    </body>
+  </main>
+
+  <!-- ###################################### Copyright ###################################### -->
+  <section id="copyright">
+    <p>© 2026 - Website Designed & Developed by Justin Ng</p>
+  </section>
+
+  <!-- JavaScript -->
+  <script type="text/javascript" src="js/main.js"></script>
+  <script type="text/javascript" src="js/projects.js"></script>
+
+</body>
+
 </html>
